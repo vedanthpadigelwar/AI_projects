@@ -114,7 +114,7 @@ def main(yolo):
                 cv2.putText(frame, str(cls) + " " + score, (int(bbox[0]), int(bbox[3])), 0,
                             1.5e-3 * frame.shape[0], (0, 255, 0), 1)
 
-        #cv2.imshow('', frame)
+        cv2.imshow('', frame)
 
         if writeVideo_flag:  # and not asyncVideo_flag:
             # save a frame
@@ -142,7 +142,7 @@ def main(yolo):
     if writeVideo_flag:
         out.release()
 
-    # cv2.destroyAllWindows()
+    cv2.destroyAllWindows()
 
 
 if __name__ == '__main__':
